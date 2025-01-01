@@ -25,7 +25,7 @@
     --ring: 224 76.3% 48%;
     --radius: 0.5rem;
     
-    /* New theme colors based on the image */
+    /* Theme colors based on the image */
     --essence-red: 0 100% 50%;
     --law-orange: 39 100% 50%;
     --archetype-blue: 195 100% 50%;
@@ -62,7 +62,7 @@
   @apply text-lg font-medium text-muted-foreground mb-4;
 }
 
-/* New color classes */
+/* Color classes */
 .essence-text {
   @apply text-[hsl(var(--essence-red))];
 }
