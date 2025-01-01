@@ -1,7 +1,7 @@
-import { ProgressSlider } from "./ProgressSlider"
-
 interface LevelProps {
   title: string;
+  essence: string;
+  poweredBy: string;
   internalTriangle: {
     archetype: string;
     state: string;
@@ -18,10 +18,24 @@ interface LevelProps {
   onValueChange: (key: string, value: number[]) => void;
 }
 
-export function Level({ title, internalTriangle, externalTriangle, values, onValueChange }: LevelProps) {
+export function Level({ 
+  title, 
+  essence,
+  poweredBy,
+  internalTriangle, 
+  externalTriangle, 
+  values, 
+  onValueChange 
+}: LevelProps) {
   return (
     <div className="mb-12">
-      <h2 className="level-title">{title}</h2>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+        <h2 className="level-title">{title}</h2>
+        <div className="flex flex-col md:flex-row md:items-center gap-4 text-sm">
+          <span className="text-primary">Essence: {essence}</span>
+          <span className="text-muted-foreground">Powered by: {poweredBy}</span>
+        </div>
+      </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="triangle-section">

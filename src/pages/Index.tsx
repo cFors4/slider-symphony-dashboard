@@ -54,6 +54,8 @@ const Index = () => {
         
         <Level
           title="Level 1: Law of Impermanence"
+          essence="Lovingness"
+          poweredBy="Mindset"
           internalTriangle={{
             archetype: "Forgiving Lover",
             state: "Open Heart",
@@ -70,6 +72,8 @@ const Index = () => {
 
         <Level
           title="Level 2: Law of Coherence"
+          essence="Oneness"
+          poweredBy="Intelligence"
           internalTriangle={{
             archetype: "Accepting Magician",
             state: "Sharp Mind",
@@ -86,6 +90,8 @@ const Index = () => {
 
         <Level
           title="Level 3: Law of Agency"
+          essence="Sovereignty"
+          poweredBy="Infrastructure"
           internalTriangle={{
             archetype: "Responsible King",
             state: "Present Awareness",
@@ -102,6 +108,8 @@ const Index = () => {
 
         <Level
           title="Level 4: Law of Competence"
+          essence="Tenacity"
+          poweredBy="Body"
           internalTriangle={{
             archetype: "Grateful Warrior",
             state: "Vital Body",
