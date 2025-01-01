@@ -1,3 +1,5 @@
+import { ProgressSlider } from "@/components/ProgressSlider"
+
 interface LevelProps {
   title: string;
   essence: string;
