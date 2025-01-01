@@ -10,6 +10,8 @@ type Recommendation = {
 };
 
 const Index = () => {
+  console.log("Index component rendering");
+  
   const [showQuestionnaire, setShowQuestionnaire] = useState(true);
   const [recommendation, setRecommendation] = useState<Recommendation | null>(null);
   const [levels, setLevels] = useState({
@@ -48,6 +50,7 @@ const Index = () => {
   });
 
   const handleValueChange = (level: string, key: string, value: number[]) => {
+    console.log("Value change:", { level, key, value });
     setLevels(prev => ({
       ...prev,
       [level]: {
@@ -58,6 +61,7 @@ const Index = () => {
   };
 
   const handleQuestionnaireComplete = (result: Recommendation) => {
+    console.log("Questionnaire completed:", result);
     setRecommendation(result);
     setShowQuestionnaire(false);
   };
