@@ -24,6 +24,16 @@
     --input: 217 33% 17%;
     --ring: 224 76.3% 48%;
     --radius: 0.5rem;
+    
+    /* New theme colors based on the image */
+    --essence-red: 0 100% 50%;
+    --law-orange: 39 100% 50%;
+    --archetype-blue: 195 100% 50%;
+    --state-purple: 280 100% 70%;
+    --trait-green: 120 100% 30%;
+    --practice-blue: 195 100% 50%;
+    --mechanism-purple: 280 100% 70%;
+    --ideal-green: 120 100% 30%;
   }
 }
 
@@ -50,4 +60,37 @@
 
 .triangle-title {
   @apply text-lg font-medium text-muted-foreground mb-4;
+}
+
+/* New color classes */
+.essence-text {
+  @apply text-[hsl(var(--essence-red))];
+}
+
+.law-text {
+  @apply text-[hsl(var(--law-orange))];
+}
+
+.archetype-text {
+  @apply text-[hsl(var(--archetype-blue))];
+}
+
+.state-text {
+  @apply text-[hsl(var(--state-purple))];
+}
+
+.trait-text {
+  @apply text-[hsl(var(--trait-green))];
+}
+
+.practice-text {
+  @apply text-[hsl(var(--practice-blue))];
+}
+
+.mechanism-text {
+  @apply text-[hsl(var(--mechanism-purple))];
+}
+
+.ideal-text {
+  @apply text-[hsl(var(--ideal-green))];
 }

@@ -4,13 +4,14 @@ interface ProgressSliderProps {
   label: string;
   value: number;
   onChange: (value: number[]) => void;
+  labelClassName?: string;
 }
 
-export function ProgressSlider({ label, value, onChange }: ProgressSliderProps) {
+export function ProgressSlider({ label, value, onChange, labelClassName }: ProgressSliderProps) {
   return (
     <div className="space-y-2">
       <div className="flex justify-between items-center">
-        <label className="slider-label">{label}</label>
+        <label className={`slider-label ${labelClassName}`}>{label}</label>
         <span className="text-sm text-muted-foreground">{value}/10</span>
       </div>
       <Slider
