@@ -34,12 +34,12 @@ export function Level({
   const [view, setView] = useState<'internal' | 'external'>('internal');
 
   return (
-    <div className="mb-12">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-        <h2 className="level-title">{title}</h2>
+    <div className="mb-12 rounded-lg bg-[#1a1f2c] p-6">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+        <h2 className="text-xl font-mono text-primary">{title}</h2>
         <div className="flex flex-col md:flex-row md:items-center gap-4">
-          <span className="essence-text font-medium">Essence: {essence}</span>
-          <span className="text-muted-foreground">Powered by: {poweredBy}</span>
+          <span className="essence-text font-mono">Essence: {essence}</span>
+          <span className="text-[#8E9196] font-mono">Powered by: {poweredBy}</span>
         </div>
       </div>
 
@@ -47,14 +47,14 @@ export function Level({
         <Toggle
           pressed={view === 'internal'}
           onPressedChange={() => setView('internal')}
-          className="px-4 py-2"
+          className="px-4 py-2 font-mono text-sm"
         >
           Internal (Being)
         </Toggle>
         <Toggle
           pressed={view === 'external'}
           onPressedChange={() => setView('external')}
-          className="px-4 py-2"
+          className="px-4 py-2 font-mono text-sm"
         >
           External (Doing)
         </Toggle>
@@ -62,52 +62,56 @@ export function Level({
       
       <div className="grid grid-cols-1 gap-8">
         {view === 'internal' && (
-          <div className="triangle-section">
-            <h3 className="triangle-title">Internal Triangle</h3>
+          <div className="space-y-8 p-6 rounded-lg bg-[#151822]">
+            <div className="text-[#8E9196] font-mono text-sm mb-6">
+              How aligned, embodied, and resonant is your being to these?
+            </div>
             <div className="space-y-6">
               <ProgressSlider
                 label={`Archetype: ${internalTriangle.archetype}`}
                 value={values.archetype}
                 onChange={(value) => onValueChange('archetype', value)}
-                labelClassName="archetype-text"
+                labelClassName="archetype-text font-mono"
               />
               <ProgressSlider
                 label={`State: ${internalTriangle.state}`}
                 value={values.state}
                 onChange={(value) => onValueChange('state', value)}
-                labelClassName="state-text"
+                labelClassName="state-text font-mono"
               />
               <ProgressSlider
                 label={`Trait: ${internalTriangle.trait}`}
                 value={values.trait}
                 onChange={(value) => onValueChange('trait', value)}
-                labelClassName="trait-text"
+                labelClassName="trait-text font-mono"
               />
             </div>
           </div>
         )}
 
         {view === 'external' && (
-          <div className="triangle-section">
-            <h3 className="triangle-title">External Triangle</h3>
+          <div className="space-y-8 p-6 rounded-lg bg-[#151822]">
+            <div className="text-[#8E9196] font-mono text-sm mb-6">
+              How Active, Momentum filled, and self-evident is the progressing in these?
+            </div>
             <div className="space-y-6">
               <ProgressSlider
                 label={`Practice: ${externalTriangle.practice}`}
                 value={values.practice}
                 onChange={(value) => onValueChange('practice', value)}
-                labelClassName="practice-text"
+                labelClassName="practice-text font-mono"
               />
               <ProgressSlider
                 label={`Mechanism: ${externalTriangle.mechanism}`}
                 value={values.mechanism}
                 onChange={(value) => onValueChange('mechanism', value)}
-                labelClassName="mechanism-text"
+                labelClassName="mechanism-text font-mono"
               />
               <ProgressSlider
                 label={`Ideal: ${externalTriangle.ideal}`}
                 value={values.ideal}
                 onChange={(value) => onValueChange('ideal', value)}
-                labelClassName="ideal-text"
+                labelClassName="ideal-text font-mono"
               />
             </div>
           </div>
