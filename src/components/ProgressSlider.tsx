@@ -23,7 +23,7 @@ export function ProgressSlider({ label, value, onChange, labelClassName }: Progr
         max={10}
         step={1}
         onValueChange={onChange}
-        className={`w-full ${sliderColor}`}
+        className={sliderColor}
       />
     </div>
   )
