@@ -9,8 +9,7 @@ interface ProgressSliderProps {
 
 export function ProgressSlider({ label, value, onChange, labelClassName }: ProgressSliderProps) {
   // Extract the color class from labelClassName
-  const colorClass = labelClassName?.split(' ').find(cls => cls.includes('-text')) || '';
-  const sliderColor = colorClass.replace('-text', '');
+  const colorClass = labelClassName?.split(' ').find(cls => cls.includes('-text'))?.replace('-text', '') || '';
 
   return (
     <div className="space-y-2">
@@ -23,7 +22,7 @@ export function ProgressSlider({ label, value, onChange, labelClassName }: Progr
         max={10}
         step={1}
         onValueChange={onChange}
-        className={sliderColor}
+        className={colorClass}
       />
     </div>
   )
