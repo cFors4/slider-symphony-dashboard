@@ -145,29 +145,47 @@ export const LawQuestionnaire = ({
             }
             className="space-y-4"
           >
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="archetype" id="archetype" />
-              <Label htmlFor="archetype">Embodying the Archetype</Label>
+            <div className="flex items-start space-x-2">
+              <RadioGroupItem value="archetype" id="archetype" className="mt-1" />
+              <Label htmlFor="archetype" className="flex flex-col">
+                <span className="font-medium">Embodying the Archetype (Being)</span>
+                <span className="text-sm text-muted-foreground">Inhabiting and expressing the qualities of a specific archetypal figure that represents your desired state</span>
+              </Label>
             </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="state" id="state" />
-              <Label htmlFor="state">Honing the State</Label>
+            <div className="flex items-start space-x-2">
+              <RadioGroupItem value="state" id="state" className="mt-1" />
+              <Label htmlFor="state" className="flex flex-col">
+                <span className="font-medium">Honing the State (Being)</span>
+                <span className="text-sm text-muted-foreground">Cultivating and maintaining a specific internal state or way of being</span>
+              </Label>
             </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="trait" id="trait" />
-              <Label htmlFor="trait">Aligning to a Trait</Label>
+            <div className="flex items-start space-x-2">
+              <RadioGroupItem value="trait" id="trait" className="mt-1" />
+              <Label htmlFor="trait" className="flex flex-col">
+                <span className="font-medium">Aligning to a Trait (Being)</span>
+                <span className="text-sm text-muted-foreground">Developing and integrating a specific character quality or attribute</span>
+              </Label>
             </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="practice" id="practice" />
-              <Label htmlFor="practice">Practicing</Label>
+            <div className="flex items-start space-x-2">
+              <RadioGroupItem value="practice" id="practice" className="mt-1" />
+              <Label htmlFor="practice" className="flex flex-col">
+                <span className="font-medium">Practicing (Doing)</span>
+                <span className="text-sm text-muted-foreground">Engaging in specific activities or exercises to develop skills and capabilities</span>
+              </Label>
             </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="mechanism" id="mechanism" />
-              <Label htmlFor="mechanism">Embracing a Mechanism</Label>
+            <div className="flex items-start space-x-2">
+              <RadioGroupItem value="mechanism" id="mechanism" className="mt-1" />
+              <Label htmlFor="mechanism" className="flex flex-col">
+                <span className="font-medium">Embracing a Mechanism (Doing)</span>
+                <span className="text-sm text-muted-foreground">Working with specific processes or systems that facilitate growth and change</span>
+              </Label>
             </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="ideal" id="ideal" />
-              <Label htmlFor="ideal">Aiming for the Ideal</Label>
+            <div className="flex items-start space-x-2">
+              <RadioGroupItem value="ideal" id="ideal" className="mt-1" />
+              <Label htmlFor="ideal" className="flex flex-col">
+                <span className="font-medium">Aiming for the Ideal (Doing)</span>
+                <span className="text-sm text-muted-foreground">Setting and working towards specific goals or standards of excellence</span>
+              </Label>
             </div>
           </RadioGroup>
         )}
